@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B1BFD66E7AA78915899ADD0 /* Pods_E_merceCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63740D8623CFE2FDEF98E51B /* Pods_E_merceCloud.framework */; };
+		9D5B45642254744200D26FB9 /* apiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B45632254744200D26FB9 /* apiService.swift */; };
 		A75AD1542249648B00687850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD1532249648B00687850 /* AppDelegate.swift */; };
 		A75AD1562249648B00687850 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD1552249648B00687850 /* ViewController.swift */; };
 		A75AD1592249648B00687850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75AD1572249648B00687850 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		2184AA7F9C4B19515EF30964 /* Pods-E-merceCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-merceCloud.debug.xcconfig"; path = "Target Support Files/Pods-E-merceCloud/Pods-E-merceCloud.debug.xcconfig"; sourceTree = "<group>"; };
 		63740D8623CFE2FDEF98E51B /* Pods_E_merceCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_merceCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D5B45632254744200D26FB9 /* apiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiService.swift; sourceTree = "<group>"; };
 		A75AD1502249648B00687850 /* E-merceCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-merceCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75AD1532249648B00687850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75AD1552249648B00687850 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +62,6 @@
 				2184AA7F9C4B19515EF30964 /* Pods-E-merceCloud.debug.xcconfig */,
 				F8815574939FB9F5414C2970 /* Pods-E-merceCloud.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -70,6 +71,14 @@
 				63740D8623CFE2FDEF98E51B /* Pods_E_merceCloud.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D5B4562225473DD00D26FB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D5B45632254744200D26FB9 /* apiService.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A75AD1472249648B00687850 = {
@@ -93,6 +102,7 @@
 		A75AD1522249648B00687850 /* E-merceCloud */ = {
 			isa = PBXGroup;
 			children = (
+				9D5B4562225473DD00D26FB9 /* Models */,
 				A75AD1652249649400687850 /* Controllers */,
 				A75AD1532249648B00687850 /* AppDelegate.swift */,
 				A75AD1552249648B00687850 /* ViewController.swift */,
@@ -246,6 +256,7 @@
 				A75AD16B224964DE00687850 /* ProductDetailViewController.swift in Sources */,
 				A75AD1542249648B00687850 /* AppDelegate.swift in Sources */,
 				A75AD16F224964F800687850 /* BillingInfoViewController.swift in Sources */,
+				9D5B45642254744200D26FB9 /* apiService.swift in Sources */,
 				A75AD16D224964EB00687850 /* CartViewController.swift in Sources */,
 				A75AD1712249650700687850 /* SuccessViewController.swift in Sources */,
 				A75AD169224964C100687850 /* HomeViewController.swift in Sources */,

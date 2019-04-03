@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="04Y-O4-2G0">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,20 +23,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="333" y="73"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Xva-Y6-VzE">
             <objects>
-                <viewController id="04Y-O4-2G0" sceneMemberID="viewController">
+                <viewController id="04Y-O4-2G0" customClass="ViewController" customModule="E_merceCloud" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0eJ-t2-Gfy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="logonoBG-1" translatesAutoresizingMaskIntoConstraints="NO" id="zI9-OV-pSo">
-                                <rect key="frame" x="0.0" y="44" width="414" height="312"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="opi-e6-4ye">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="opi-e6-4ye">
                                 <rect key="frame" x="30" y="354" width="350" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -48,27 +47,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUw-ja-2NS">
+                                <rect key="frame" x="175" y="603" width="60" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="04Y-O4-2G0" eventType="touchUpInside" id="07w-HY-vJ5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="opi-e6-4ye" firstAttribute="leading" secondItem="nc8-kC-HzN" secondAttribute="leading" constant="73" id="376-R7-L5C"/>
-                            <constraint firstItem="nc8-kC-HzN" firstAttribute="bottom" secondItem="opi-e6-4ye" secondAttribute="bottom" constant="46" id="6LL-NU-1fl"/>
-                            <constraint firstItem="opi-e6-4ye" firstAttribute="top" secondItem="zI9-OV-pSo" secondAttribute="bottom" constant="8" id="JIi-5S-xbY"/>
-                            <constraint firstItem="opi-e6-4ye" firstAttribute="top" secondItem="zI9-OV-pSo" secondAttribute="bottom" constant="8" symbolic="YES" id="Okh-uB-upU"/>
-                            <constraint firstItem="opi-e6-4ye" firstAttribute="leading" secondItem="nc8-kC-HzN" secondAttribute="leading" constant="73" id="Vab-UH-B6T"/>
-                            <constraint firstItem="nc8-kC-HzN" firstAttribute="bottom" secondItem="opi-e6-4ye" secondAttribute="bottom" constant="464" id="b09-zY-gvE"/>
-                            <constraint firstItem="nc8-kC-HzN" firstAttribute="trailing" secondItem="opi-e6-4ye" secondAttribute="trailing" constant="89" id="fq3-bb-AIA"/>
-                            <constraint firstItem="nc8-kC-HzN" firstAttribute="trailing" secondItem="opi-e6-4ye" secondAttribute="trailing" constant="89" id="lF9-QV-o7P"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nc8-kC-HzN"/>
                     </view>
+                    <connections>
+                        <outlet property="passTxtField" destination="XBs-rI-CCv" id="Kll-Dq-jh4"/>
+                        <outlet property="userTxtField" destination="opi-e6-4ye" id="U25-fD-TFV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ji8-gh-ABG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1346.376811594203" y="26.785714285714285"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logonoBG-1" width="375.75" height="255"/>
-    </resources>
 </document>
