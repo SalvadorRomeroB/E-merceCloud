@@ -14,7 +14,7 @@
 		A75AD1592249648B00687850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75AD1572249648B00687850 /* Main.storyboard */; };
 		A75AD15B2249648B00687850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75AD15A2249648B00687850 /* Assets.xcassets */; };
 		A75AD15E2249648B00687850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75AD15C2249648B00687850 /* LaunchScreen.storyboard */; };
-		A75AD167224964B000687850 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD166224964B000687850 /* LoginViewController.swift */; };
+		A75AD167224964B000687850 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD166224964B000687850 /* CreateAccountViewController.swift */; };
 		A75AD169224964C100687850 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD168224964C100687850 /* HomeViewController.swift */; };
 		A75AD16B224964DE00687850 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD16A224964DE00687850 /* ProductDetailViewController.swift */; };
 		A75AD16D224964EB00687850 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD16C224964EB00687850 /* CartViewController.swift */; };
@@ -34,7 +34,7 @@
 		A75AD15A2249648B00687850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75AD15D2249648B00687850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A75AD15F2249648B00687850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A75AD166224964B000687850 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A75AD166224964B000687850 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		A75AD168224964C100687850 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A75AD16A224964DE00687850 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		A75AD16C224964EB00687850 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		A75AD1652249649400687850 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A75AD166224964B000687850 /* LoginViewController.swift */,
+				A75AD166224964B000687850 /* CreateAccountViewController.swift */,
 				A75AD168224964C100687850 /* HomeViewController.swift */,
 				A75AD16A224964DE00687850 /* ProductDetailViewController.swift */,
 				A75AD16C224964EB00687850 /* CartViewController.swift */,
@@ -250,7 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A75AD167224964B000687850 /* LoginViewController.swift in Sources */,
+				A75AD167224964B000687850 /* CreateAccountViewController.swift in Sources */,
 				A75AD1732249669900687850 /* MyOrdersViewController.swift in Sources */,
 				A75AD1562249648B00687850 /* ViewController.swift in Sources */,
 				A75AD16B224964DE00687850 /* ProductDetailViewController.swift in Sources */,

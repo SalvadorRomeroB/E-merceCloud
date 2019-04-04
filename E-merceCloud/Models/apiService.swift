@@ -22,4 +22,16 @@ class apiServer {
             success(response.result.value)
         }
     }
+    
+    func signUpProcess(_ parameters: [String :  String], success: @escaping (Any?) -> Void){
+        
+        
+        let url : URL = URL(string: "https://mobilerestapi.klauskt.now.sh/users/add")!
+        
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON {
+            response in
+            
+            success(response.result.value)
+        }
+    }
 }
