@@ -7,43 +7,47 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ProductsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    let apiInstance: apiServer = apiServer()
     
     var products: [Product] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getProducts()
         tableView.delegate = self
         tableView.dataSource = self
-        products = createArray()
-        tableView.reloadData()
+        self.tableView.rowHeight = 90
+        self.title = "Product List"
     }
     
-    func createArray() ->[Product]{
-        
-        var tempProducts : [Product] = []
-        
-        let url = URL(string: "https://images-na.ssl-images-amazon.com/images/I/61KdlfgIBiL._SL1500_.jpg")!
-        
-        getData(from: url) { data, response, error in
-            guard let data = data, error == nil else {
-                return
-            }
+    func getProducts(){
+        apiInstance.getProducts([:]){(result) in
+            let resultJSON: JSON = JSON(result!)
             
-            let product = Product(image: UIImage(data: data)!, name: "Test Product", price: 100.00);
-            tempProducts.append(product)
+            for product in resultJSON {
+                let img = product.1["image"].rawString()
+                let name = product.1["name"].rawString()
+                let price = product.1["atomic_price"].rawString()
+                
+                let productIns = Product(image: img!, name: name!, price: Float(price!) as! Float)
+                self.products.append(productIns)
+            }
+            self.tableView.reloadData()
         }
-        
-        return tempProducts
-        
     }
     
-    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "productDetail" {
+            if let vc = segue.destination as? ProductDetailViewController {
+                let indexPath = self.tableView.indexPathForSelectedRow
+                vc.product = self.products[indexPath!.row]
+            }
+        }
     }
-    
 }
 
 extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -59,6 +63,7 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.setProduct(product: product)
         
+        //cell.layoutSubviews()
         return cell
-    }   
+    }
 }

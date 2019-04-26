@@ -34,4 +34,18 @@ class apiServer {
             success(response.result.value)
         }
     }
+    
+    func getProducts(_ parameters: [String :  String], success: @escaping (Any?) -> Void){
+        
+        
+        let url : URL = URL(string: "https://mobilerestapi.klauskt.now.sh/products")!
+        
+        Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default).responseJSON {
+            response in
+
+            success(response.result.value)
+        }
+    }
+    
+    
 }

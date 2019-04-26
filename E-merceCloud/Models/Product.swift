@@ -11,11 +11,11 @@ import UIKit
 
 class Product {
     
-    var image : UIImage
+    var image : String
     var name: String
     var price: Float
     
-    init(image: UIImage, name: String, price: Float){
+    init(image: String, name: String, price: Float){
         self.image = image;
         self.name = name;
         self.price = price;
