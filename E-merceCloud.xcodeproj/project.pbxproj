@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8B1BFD66E7AA78915899ADD0 /* Pods_E_merceCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63740D8623CFE2FDEF98E51B /* Pods_E_merceCloud.framework */; };
+		9D446ED522722DE60068558A /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D446ED422722DE60068558A /* ProductCell.swift */; };
+		9D446ED722722EB80068558A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D446ED622722EB80068558A /* Product.swift */; };
+		9D446ED922722FA90068558A /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D446ED822722FA90068558A /* ProductsViewController.swift */; };
 		9D5B45642254744200D26FB9 /* apiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B45632254744200D26FB9 /* apiService.swift */; };
 		A75AD1542249648B00687850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD1532249648B00687850 /* AppDelegate.swift */; };
 		A75AD1562249648B00687850 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD1552249648B00687850 /* ViewController.swift */; };
@@ -26,6 +29,9 @@
 /* Begin PBXFileReference section */
 		2184AA7F9C4B19515EF30964 /* Pods-E-merceCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-merceCloud.debug.xcconfig"; path = "Target Support Files/Pods-E-merceCloud/Pods-E-merceCloud.debug.xcconfig"; sourceTree = "<group>"; };
 		63740D8623CFE2FDEF98E51B /* Pods_E_merceCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_merceCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D446ED422722DE60068558A /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		9D446ED622722EB80068558A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		9D446ED822722FA90068558A /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		9D5B45632254744200D26FB9 /* apiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiService.swift; sourceTree = "<group>"; };
 		A75AD1502249648B00687850 /* E-merceCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-merceCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75AD1532249648B00687850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,10 +79,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9D446ED322722D9A0068558A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9D446ED422722DE60068558A /* ProductCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		9D5B4562225473DD00D26FB9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				9D5B45632254744200D26FB9 /* apiService.swift */,
+				9D446ED622722EB80068558A /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,6 +117,7 @@
 		A75AD1522249648B00687850 /* E-merceCloud */ = {
 			isa = PBXGroup;
 			children = (
+				9D446ED322722D9A0068558A /* Cells */,
 				9D5B4562225473DD00D26FB9 /* Models */,
 				A75AD1652249649400687850 /* Controllers */,
 				A75AD1532249648B00687850 /* AppDelegate.swift */,
@@ -124,6 +140,7 @@
 				A75AD16E224964F800687850 /* BillingInfoViewController.swift */,
 				A75AD1702249650700687850 /* SuccessViewController.swift */,
 				A75AD1722249669900687850 /* MyOrdersViewController.swift */,
+				9D446ED822722FA90068558A /* ProductsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,9 +268,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A75AD167224964B000687850 /* CreateAccountViewController.swift in Sources */,
+				9D446ED522722DE60068558A /* ProductCell.swift in Sources */,
 				A75AD1732249669900687850 /* MyOrdersViewController.swift in Sources */,
+				9D446ED922722FA90068558A /* ProductsViewController.swift in Sources */,
 				A75AD1562249648B00687850 /* ViewController.swift in Sources */,
 				A75AD16B224964DE00687850 /* ProductDetailViewController.swift in Sources */,
+				9D446ED722722EB80068558A /* Product.swift in Sources */,
 				A75AD1542249648B00687850 /* AppDelegate.swift in Sources */,
 				A75AD16F224964F800687850 /* BillingInfoViewController.swift in Sources */,
 				9D5B45642254744200D26FB9 /* apiService.swift in Sources */,
