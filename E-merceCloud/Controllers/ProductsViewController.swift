@@ -21,7 +21,7 @@ class ProductsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.rowHeight = 90
-        self.title = "Product List"
+        self.title = "Products"
     }
     
     func getProducts(){

@@ -26,6 +26,9 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var passwordConfirmInput: UITextField!
     @IBOutlet weak var companyIdInput: UITextField!
     
+    @IBAction func backToLogin(_ sender: UIButton) {
+        performSegue(withIdentifier: "loginSegue", sender: nil)
+    }
     
     @IBAction func signUpAction(_ sender: UIButton) {
         
@@ -40,8 +43,7 @@ class CreateAccountViewController: UIViewController {
                 let resultJSON: JSON = JSON(result!)
                 let alert = UIAlertController(title: "Account Created", message: resultJSON["user"].stringValue, preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default){(action) -> Void in
-                    
-                    self.navigationController?.popViewController(animated: true)
+                    self.performSegue(withIdentifier: "signUpHomeSegue", sender: nil)
                 })
                 self.present(alert, animated: true, completion: nil)
                 

@@ -13,7 +13,7 @@
 		9D446ED922722FA90068558A /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D446ED822722FA90068558A /* ProductsViewController.swift */; };
 		9D5B45642254744200D26FB9 /* apiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B45632254744200D26FB9 /* apiService.swift */; };
 		A75AD1542249648B00687850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD1532249648B00687850 /* AppDelegate.swift */; };
-		A75AD1562249648B00687850 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD1552249648B00687850 /* ViewController.swift */; };
+		A75AD1562249648B00687850 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD1552249648B00687850 /* LoginViewController.swift */; };
 		A75AD1592249648B00687850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75AD1572249648B00687850 /* Main.storyboard */; };
 		A75AD15B2249648B00687850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A75AD15A2249648B00687850 /* Assets.xcassets */; };
 		A75AD15E2249648B00687850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75AD15C2249648B00687850 /* LaunchScreen.storyboard */; };
@@ -35,7 +35,7 @@
 		9D5B45632254744200D26FB9 /* apiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiService.swift; sourceTree = "<group>"; };
 		A75AD1502249648B00687850 /* E-merceCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-merceCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75AD1532249648B00687850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A75AD1552249648B00687850 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A75AD1552249648B00687850 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A75AD1582249648B00687850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A75AD15A2249648B00687850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A75AD15D2249648B00687850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -121,7 +121,6 @@
 				9D5B4562225473DD00D26FB9 /* Models */,
 				A75AD1652249649400687850 /* Controllers */,
 				A75AD1532249648B00687850 /* AppDelegate.swift */,
-				A75AD1552249648B00687850 /* ViewController.swift */,
 				A75AD1572249648B00687850 /* Main.storyboard */,
 				A75AD15A2249648B00687850 /* Assets.xcassets */,
 				A75AD15C2249648B00687850 /* LaunchScreen.storyboard */,
@@ -133,6 +132,7 @@
 		A75AD1652249649400687850 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A75AD1552249648B00687850 /* LoginViewController.swift */,
 				A75AD166224964B000687850 /* CreateAccountViewController.swift */,
 				A75AD168224964C100687850 /* HomeViewController.swift */,
 				A75AD16A224964DE00687850 /* ProductDetailViewController.swift */,
@@ -179,6 +179,7 @@
 				TargetAttributes = {
 					A75AD14F2249648B00687850 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -271,7 +272,7 @@
 				9D446ED522722DE60068558A /* ProductCell.swift in Sources */,
 				A75AD1732249669900687850 /* MyOrdersViewController.swift in Sources */,
 				9D446ED922722FA90068558A /* ProductsViewController.swift in Sources */,
-				A75AD1562249648B00687850 /* ViewController.swift in Sources */,
+				A75AD1562249648B00687850 /* LoginViewController.swift in Sources */,
 				A75AD16B224964DE00687850 /* ProductDetailViewController.swift in Sources */,
 				9D446ED722722EB80068558A /* Product.swift in Sources */,
 				A75AD1542249648B00687850 /* AppDelegate.swift in Sources */,
@@ -434,7 +435,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TlalocStudio.E-merceCloud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -452,7 +453,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.TlalocStudio.E-merceCloud";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

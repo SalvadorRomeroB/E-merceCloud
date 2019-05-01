@@ -9,10 +9,11 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    @IBOutlet weak var featureTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        featureTableView.alwaysBounceVertical = false
         // Do any additional setup after loading the view.
     }
     
