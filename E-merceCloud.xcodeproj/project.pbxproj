@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76BB6DA4227B9EFD009C07C8 /* emerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76BB6DA2227B9EFD009C07C8 /* emerce.xcdatamodeld */; };
+		76BB6DA6227B9FDB009C07C8 /* EmerceDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BB6DA5227B9FDB009C07C8 /* EmerceDAO.swift */; };
+		76BB6DA8227BA1D6009C07C8 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BB6DA7227BA1D6009C07C8 /* UserVO.swift */; };
 		8B1BFD66E7AA78915899ADD0 /* Pods_E_merceCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63740D8623CFE2FDEF98E51B /* Pods_E_merceCloud.framework */; };
 		9D446ED522722DE60068558A /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D446ED422722DE60068558A /* ProductCell.swift */; };
 		9D446ED722722EB80068558A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D446ED622722EB80068558A /* Product.swift */; };
@@ -29,6 +32,9 @@
 /* Begin PBXFileReference section */
 		2184AA7F9C4B19515EF30964 /* Pods-E-merceCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-merceCloud.debug.xcconfig"; path = "Target Support Files/Pods-E-merceCloud/Pods-E-merceCloud.debug.xcconfig"; sourceTree = "<group>"; };
 		63740D8623CFE2FDEF98E51B /* Pods_E_merceCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_merceCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76BB6DA3227B9EFD009C07C8 /* emerce.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = emerce.xcdatamodel; sourceTree = "<group>"; };
+		76BB6DA5227B9FDB009C07C8 /* EmerceDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmerceDAO.swift; sourceTree = "<group>"; };
+		76BB6DA7227BA1D6009C07C8 /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
 		9D446ED422722DE60068558A /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		9D446ED622722EB80068558A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9D446ED822722FA90068558A /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +98,8 @@
 			children = (
 				9D5B45632254744200D26FB9 /* apiService.swift */,
 				9D446ED622722EB80068558A /* Product.swift */,
+				76BB6DA5227B9FDB009C07C8 /* EmerceDAO.swift */,
+				76BB6DA7227BA1D6009C07C8 /* UserVO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 				A75AD15A2249648B00687850 /* Assets.xcassets */,
 				A75AD15C2249648B00687850 /* LaunchScreen.storyboard */,
 				A75AD15F2249648B00687850 /* Info.plist */,
+				76BB6DA2227B9EFD009C07C8 /* emerce.xcdatamodeld */,
 			);
 			path = "E-merceCloud";
 			sourceTree = "<group>";
@@ -268,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BB6DA6227B9FDB009C07C8 /* EmerceDAO.swift in Sources */,
 				A75AD167224964B000687850 /* CreateAccountViewController.swift in Sources */,
 				9D446ED522722DE60068558A /* ProductCell.swift in Sources */,
 				A75AD1732249669900687850 /* MyOrdersViewController.swift in Sources */,
@@ -278,6 +288,8 @@
 				A75AD1542249648B00687850 /* AppDelegate.swift in Sources */,
 				A75AD16F224964F800687850 /* BillingInfoViewController.swift in Sources */,
 				9D5B45642254744200D26FB9 /* apiService.swift in Sources */,
+				76BB6DA8227BA1D6009C07C8 /* UserVO.swift in Sources */,
+				76BB6DA4227B9EFD009C07C8 /* emerce.xcdatamodeld in Sources */,
 				A75AD16D224964EB00687850 /* CartViewController.swift in Sources */,
 				A75AD1712249650700687850 /* SuccessViewController.swift in Sources */,
 				A75AD169224964C100687850 /* HomeViewController.swift in Sources */,
@@ -480,6 +492,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		76BB6DA2227B9EFD009C07C8 /* emerce.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				76BB6DA3227B9EFD009C07C8 /* emerce.xcdatamodel */,
+			);
+			currentVersion = 76BB6DA3227B9EFD009C07C8 /* emerce.xcdatamodel */;
+			path = emerce.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A75AD1482249648B00687850 /* Project object */;
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ProductDetailViewController: UIViewController {
     
@@ -14,6 +15,9 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var productDescription: UITextView!
+    
+    let apiInstance: apiServer = apiServer()
+    let emerceDAO: EmerceDAO = EmerceDAO()
     
     var product : Product = Product(image: "", name: "", price: 0, id: "0", description: "")
 
@@ -28,6 +32,33 @@ class ProductDetailViewController: UIViewController {
             downloadImage(from: url!)
         }
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func addToCartAction(_ sender: UIButton) {
+        print("******** added to cart! ******")
+        
+        let userSignedIn: [UserVO] = self.emerceDAO.findAll()
+        
+        let parameters: [String: String] = [
+            "user_email" : userSignedIn[0].email,
+            "item_id" : self.product.id,
+            "quantity" : "1"
+        ]
+        
+        apiInstance.postCart(parameters){(result) in
+            let resultJSON: JSON = JSON(result!)
+            if !resultJSON["msg"].exists() {
+                let alert = UIAlertController(title: "Item added to your cart", message: self.product.name, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                let alert = UIAlertController(title: "Error", message: resultJSON["msg"].stringValue, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        
     }
     
     func downloadImage(from url: URL) {

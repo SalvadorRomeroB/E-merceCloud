@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
     let apiInstance: apiServer = apiServer()
+    let emerceDAO: EmerceDAO = EmerceDAO()
 
     @IBOutlet weak var userTxtField: UITextField!
     @IBOutlet weak var passTxtField: UITextField!
@@ -44,7 +45,10 @@ class ViewController: UIViewController {
             let resultJSON: JSON = JSON(result!)
             if !resultJSON["msg"].exists() {
                 //LoginSuccesss
-                self.performSegue(withIdentifier: "homeSegue", sender: nil)
+                self.emerceDAO.insertUser(email: params["email"]!, firstname: "test", lastname: "for now")
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "homeSegue", sender: nil)
+                }
             }else{
                 //LoginFail
                 let alert = UIAlertController(title: "Error", message: resultJSON["msg"].stringValue, preferredStyle: UIAlertController.Style.alert)

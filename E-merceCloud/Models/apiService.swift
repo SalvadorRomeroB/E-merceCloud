@@ -47,5 +47,27 @@ class apiServer {
         }
     }
     
+    func postCart(_ parameters: [String :  String], success: @escaping (Any?) -> Void){
+        
+        let url : URL = URL(string: "https://mobilerestapi.klauskt.now.sh/cart/add")!
+        
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON {
+            response in
+            
+            success(response.result.value)
+        }
+    }
+    
+    func getUser(_ parameters: [String :  String], success: @escaping (Any?) -> Void){
+        
+        
+        let url : URL = URL(string: "https://mobilerestapi.klauskt.now.sh/users/find")!
+        
+        Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default).responseJSON {
+            response in
+            
+            success(response.result.value)
+        }
+    }
     
 }

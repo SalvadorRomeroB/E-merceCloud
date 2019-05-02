@@ -310,10 +310,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Fd-na-wgh">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fd-na-wgh">
                                 <rect key="frame" x="0.0" y="64" width="375" height="737"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rcu-Rz-IYv">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rcu-Rz-IYv">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXJ-lB-zvP">
@@ -335,6 +335,9 @@
                                                 <rect key="frame" x="208" y="414" width="80" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Add to card"/>
+                                                <connections>
+                                                    <action selector="addToCartAction:" destination="TCA-sl-JmB" eventType="touchUpInside" id="b9f-6L-XeM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -364,6 +367,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Rcu-Rz-IYv" firstAttribute="width" secondItem="ho8-dq-mrK" secondAttribute="width" id="J6R-mD-CQv"/>
                             <constraint firstItem="7Fd-na-wgh" firstAttribute="bottom" secondItem="xQ0-cq-acz" secondAttribute="bottom" id="SI2-xk-RIk"/>
                             <constraint firstItem="7Fd-na-wgh" firstAttribute="trailing" secondItem="xQ0-cq-acz" secondAttribute="trailing" id="TL2-km-eCv"/>
                             <constraint firstItem="7Fd-na-wgh" firstAttribute="top" secondItem="xQ0-cq-acz" secondAttribute="top" id="WQA-Ui-fRl"/>
