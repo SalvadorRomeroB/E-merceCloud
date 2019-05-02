@@ -32,8 +32,10 @@ class ProductsViewController: UIViewController {
                 let img = product.1["image"].rawString()
                 let name = product.1["name"].rawString()
                 let price = product.1["atomic_price"].rawString()
+                let id = product.1["_id"].rawString()
+                let desc = product.1["description"].rawString()
                 
-                let productIns = Product(image: img!, name: name!, price: Float(price!) as! Float)
+                let productIns = Product(image: img!, name: name!, price: Float(price!) as! Float, id: id!,description: desc!)
                 self.products.append(productIns)
             }
             self.tableView.reloadData()

@@ -13,7 +13,9 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productPrice: UILabel!
-    var product : Product = Product(image: "", name: "", price: 0)
+    @IBOutlet weak var productDescription: UITextView!
+    
+    var product : Product = Product(image: "", name: "", price: 0, id: "0", description: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,7 @@ class ProductDetailViewController: UIViewController {
         if product.name != ""{
             nameLbl.text = product.name
             productPrice.text = String(product.price)
+            productDescription.text = product.description
             let url = URL(string: product.image)
             downloadImage(from: url!)
         }

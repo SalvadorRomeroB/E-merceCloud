@@ -14,10 +14,14 @@ class Product {
     var image : String
     var name: String
     var price: Float
+    var id: String
+    var description:String
     
-    init(image: String, name: String, price: Float){
+    init(image: String, name: String, price: Float, id: String, description: String){
         self.image = image;
         self.name = name;
         self.price = price;
+        self.id = id;
+        self.description = description;
     }
 }
