@@ -24,15 +24,16 @@ class EmerceDAO: NSObject {
     func findAll() -> [UserVO] {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         var usersTemp: [UserVO] = []
-        var index: Int = 0
         
         do {
             if let result = try? managedObjectContext.fetch(fetchRequest) {
                 for object in result {
-                    usersTemp[index].email = object.email ?? "admin@gmail.com"
-                    usersTemp[index].firstname = object.firstname ?? "admin"
-                    usersTemp[index].lastname = object.lastname ?? "admin lastname"
-                    index += 1
+                    var user: UserVO = UserVO()
+                    user.email = object.email ?? "admin@gmail.com"
+                    user.firstname = object.firstname ?? "admin"
+                    user.lastname = object.lastname ?? "admin lastname"
+                    
+                    usersTemp.append(user)
                 }
             } else {
                 NSLog("Error fetching the movies from databse")
@@ -40,6 +41,29 @@ class EmerceDAO: NSObject {
         }
         
         return usersTemp
+    }
+    
+    //MARK: Functions
+    func findLastUser() -> UserVO {
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        var usersTemp: [UserVO] = []
+        
+        do {
+            if let result = try? managedObjectContext.fetch(fetchRequest) {
+                for object in result {
+                    var user: UserVO = UserVO()
+                    user.email = object.email ?? "placeholder@gmail.com"
+                    user.firstname = object.firstname ?? "placeholder"
+                    user.lastname = object.lastname ?? "placeholder lastname"
+                    
+                    usersTemp.append(user)
+                }
+            } else {
+                NSLog("Error fetching the movies from databse")
+            }
+        }
+        
+        return usersTemp.last!
     }
     
     //MARK: Functions

@@ -39,13 +39,18 @@ class ProductDetailViewController: UIViewController {
         print("******** added to cart! ******")
         
         let userSignedIn: [UserVO] = self.emerceDAO.findAll()
-        
+        /*
         let parameters: [String: String] = [
             "user_email" : userSignedIn[0].email,
             "item_id" : self.product.id,
             "quantity" : "1"
         ]
+        */
+        for user in userSignedIn{
+            print(user.email)
+        }
         
+        /*
         apiInstance.postCart(parameters){(result) in
             let resultJSON: JSON = JSON(result!)
             if !resultJSON["msg"].exists() {
@@ -58,6 +63,7 @@ class ProductDetailViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
+ */
         
     }
     
