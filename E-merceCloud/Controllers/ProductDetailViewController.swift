@@ -42,8 +42,11 @@ class ProductDetailViewController: UIViewController {
         
         let parameters: [String: String] = [
             "user_email" : userSignedIn.email,
-            "item_id" : self.product.id,
-            "quantity" : "1"
+            "quantity" : "1",
+            "name": product.name,
+            "atomic_price": String(product.price),
+            "description": product.description,
+            "image": product.image
         ]
  
         print(userSignedIn.email)
