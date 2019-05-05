@@ -58,6 +58,11 @@ class ViewController: UIViewController {
         }
     }
     
+    func signOut() {
+        let currentUser = emerceDAO.findLastUser()
+        emerceDAO.deleteUser(email: currentUser.email)
+    }
+    
 
 }
 
