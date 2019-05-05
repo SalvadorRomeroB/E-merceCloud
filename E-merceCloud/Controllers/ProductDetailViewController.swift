@@ -49,7 +49,6 @@ class ProductDetailViewController: UIViewController {
             "image": product.image
         ]
  
-        print(userSignedIn.email)
         
         
         apiInstance.postCart(parameters){(result) in
