@@ -18,7 +18,8 @@ class CartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("viewDidLoad : CartViewController")
+        myCart = []
         getCart()
         cartTable.delegate = self
         cartTable.dataSource = self
@@ -34,13 +35,9 @@ class CartViewController: UIViewController {
             "email" : userSignedIn.email
         ]
         
-        print(userSignedIn.email)
-        
         
         apiInstance.getCart(parameters){(result) in
             let resultJSON: JSON = JSON(result!)
-            
-            print(resultJSON)
             
             for cart in resultJSON {
                 let email = cart.1["user_email"].rawString()
@@ -59,9 +56,21 @@ class CartViewController: UIViewController {
  
     }
     
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    func deleteItemFromCart(cart_id: String) {
+        let parameters: [String: String] = [
+            "id" : cart_id
+        ]
         
+        apiInstance.deleteItemCart(parameters){(result) in
+            let resultJSON: JSON = JSON(result!)
+            if !resultJSON["msg"].exists() {
+                //Delete succeed
+                print("Item successfuly removed from cart")
+            }else{
+                //Delete fail
+                print("Error removing item from cart")
+            }
+        }
     }
 
 }
@@ -83,5 +92,14 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate {
         
         //cell.layoutSubviews()
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let cartId = myCart[indexPath.row].id
+            myCart.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            self.deleteItemFromCart(cart_id: cartId)
+        }
     }
 }
