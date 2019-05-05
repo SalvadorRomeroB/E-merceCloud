@@ -15,16 +15,26 @@ class CartViewController: UIViewController {
     let apiInstance: apiServer = apiServer()
     let emerceDAO: EmerceDAO = EmerceDAO()
     var myCart: [ItemCart] = []
+    var viewFlag: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad : CartViewController")
-        myCart = []
-        getCart()
+        if viewFlag {
+            viewFlag = false
+        }
         cartTable.delegate = self
         cartTable.dataSource = self
         self.cartTable.rowHeight = 90
         self.title = "My Cart"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if !viewFlag {
+            print("viewDidAppear : CartViewController")
+            myCart = []
+            getCart()
+        }
+        
     }
     
     func getCart(){
