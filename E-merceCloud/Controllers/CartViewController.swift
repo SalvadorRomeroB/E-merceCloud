@@ -123,6 +123,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate {
             myCart.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             self.deleteItemFromCart(cart_id: cartId)
+            self.getTotal()
         }
     }
 }
