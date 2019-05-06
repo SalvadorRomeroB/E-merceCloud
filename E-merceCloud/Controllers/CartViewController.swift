@@ -32,6 +32,7 @@ class CartViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if !viewFlag {
             print("viewDidAppear : CartViewController")
+            myCart = []
             getCart()
         }
         
