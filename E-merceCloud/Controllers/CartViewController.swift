@@ -16,6 +16,7 @@ class CartViewController: UIViewController {
     let emerceDAO: EmerceDAO = EmerceDAO()
     var myCart: [ItemCart] = []
     var viewFlag: Bool = true
+    @IBOutlet weak var totalLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,8 +63,21 @@ class CartViewController: UIViewController {
                 self.myCart.append(ItemCartInst)
             }
             self.cartTable.reloadData()
+            self.getTotal()
         }
  
+    }
+    
+    func getTotal() {
+        var total: Float = 0.0
+        print(myCart.count)
+        for item in myCart {
+            let price = Float(item.price) as! Float
+            let quantity = Float(item.quantity) as! Float
+            total += (price * quantity)
+            print(item.price)
+        }
+        totalLabel.text = "$" + String(round(total*1000)/1000)
     }
     
     func deleteItemFromCart(cart_id: String) {
@@ -110,6 +124,7 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate {
             myCart.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             self.deleteItemFromCart(cart_id: cartId)
+            self.getTotal()
         }
     }
 }
