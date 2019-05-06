@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		763F40BF227F850200755642 /* ItemCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763F40BE227F850200755642 /* ItemCart.swift */; };
+		763F40C3227FC13E00755642 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763F40C2227FC13E00755642 /* ProfileViewController.swift */; };
 		76BB6DA4227B9EFD009C07C8 /* emerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76BB6DA2227B9EFD009C07C8 /* emerce.xcdatamodeld */; };
 		76BB6DA6227B9FDB009C07C8 /* EmerceDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BB6DA5227B9FDB009C07C8 /* EmerceDAO.swift */; };
 		76BB6DA8227BA1D6009C07C8 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BB6DA7227BA1D6009C07C8 /* UserVO.swift */; };
@@ -35,6 +36,7 @@
 		2184AA7F9C4B19515EF30964 /* Pods-E-merceCloud.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-merceCloud.debug.xcconfig"; path = "Target Support Files/Pods-E-merceCloud/Pods-E-merceCloud.debug.xcconfig"; sourceTree = "<group>"; };
 		63740D8623CFE2FDEF98E51B /* Pods_E_merceCloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_merceCloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		763F40BE227F850200755642 /* ItemCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCart.swift; sourceTree = "<group>"; };
+		763F40C2227FC13E00755642 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		76BB6DA3227B9EFD009C07C8 /* emerce.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = emerce.xcdatamodel; sourceTree = "<group>"; };
 		76BB6DA5227B9FDB009C07C8 /* EmerceDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmerceDAO.swift; sourceTree = "<group>"; };
 		76BB6DA7227BA1D6009C07C8 /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				A75AD1702249650700687850 /* SuccessViewController.swift */,
 				A75AD1722249669900687850 /* MyOrdersViewController.swift */,
 				9D446ED822722FA90068558A /* ProductsViewController.swift */,
+				763F40C2227FC13E00755642 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				A75AD1562249648B00687850 /* LoginViewController.swift in Sources */,
 				A75AD16B224964DE00687850 /* ProductDetailViewController.swift in Sources */,
 				9D446ED722722EB80068558A /* Product.swift in Sources */,
+				763F40C3227FC13E00755642 /* ProfileViewController.swift in Sources */,
 				A75AD1542249648B00687850 /* AppDelegate.swift in Sources */,
 				A75AD16F224964F800687850 /* BillingInfoViewController.swift in Sources */,
 				9D5B45642254744200D26FB9 /* apiService.swift in Sources */,

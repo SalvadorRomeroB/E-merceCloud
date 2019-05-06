@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="04Y-O4-2G0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="04Y-O4-2G0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -548,7 +548,7 @@
         <!--Profile-->
         <scene sceneID="Q3u-lM-vMR">
             <objects>
-                <viewController id="kD1-cu-v5L" sceneMemberID="viewController">
+                <viewController id="kD1-cu-v5L" customClass="ProfileViewController" customModule="E_merceCloud" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kqX-64-F8o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -565,22 +565,75 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, &lt;username&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgn-Al-K8J">
-                                <rect key="frame" x="22" y="131" width="332" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgn-Al-K8J">
+                                <rect key="frame" x="22" y="131" width="127" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.27988648830000001" green="0.46044907299999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xDv-bC-dzn">
+                                <rect key="frame" x="22" y="178" width="127" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.27988648830000001" green="0.46044907299999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV5-mR-eyC">
+                                <rect key="frame" x="22" y="225" width="127" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.27988648830000001" green="0.46044907299999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;firstname&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlT-G6-VyZ">
+                                <rect key="frame" x="148" y="131" width="211" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;lastname&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fap-VL-7Nt">
+                                <rect key="frame" x="148" y="178" width="211" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;email&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6n-kL-dQ3">
+                                <rect key="frame" x="102" y="225" width="257" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-uB-44u">
+                                <rect key="frame" x="42" y="521" width="291" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1068724766" green="0.28587856890000002" blue="0.46872878070000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                <state key="normal" title="LOG OUT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutAction:" destination="kD1-cu-v5L" eventType="touchUpInside" id="cfw-BX-W0f"/>
+                                    <segue destination="04Y-O4-2G0" kind="show" id="g5E-SM-joe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jir-dg-5bT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="user" id="i4I-pP-fjy"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="M6n-kL-dQ3" id="Fl3-Oe-n7c"/>
+                        <outlet property="fnameLabel" destination="nlT-G6-VyZ" id="rQL-7i-TH8"/>
+                        <outlet property="lnameLabel" destination="Fap-VL-7Nt" id="r6t-Ms-MjI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItA-lO-4lX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936.79999999999995" y="3740.7796101949029"/>
+            <point key="canvasLocation" x="-634.39999999999998" y="3579.7601199400301"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="m9U-Y7-zzh">
@@ -675,21 +728,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TRP-Lx-HPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-394.39999999999998" y="3540.179910044978"/>
+            <point key="canvasLocation" x="519" y="3580"/>
         </scene>
     </scenes>
     <resources>
         <image name="HomeImg" width="321" height="129"/>
-        <image name="Logo" width="501" height="340"/>
-        <image name="company" width="24" height="24"/>
-        <image name="email" width="24" height="24"/>
-        <image name="home" width="24" height="24"/>
-        <image name="locked" width="24" height="24"/>
-        <image name="package" width="24" height="24"/>
-        <image name="shopping-cart" width="24" height="24"/>
-        <image name="user" width="24" height="24"/>
+        <image name="Logo" width="375.75" height="255"/>
+        <image name="company" width="18" height="18"/>
+        <image name="email" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="home" width="18" height="18"/>
+        <image name="locked" width="18" height="18"/>
+        <image name="package" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="shopping-cart" width="18" height="18"/>
+        <image name="user" width="19.200000762939453" height="19.200000762939453"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7cP-QJ-Q00"/>
+        <segue reference="g5E-SM-joe"/>
     </inferredMetricsTieBreakers>
 </document>
