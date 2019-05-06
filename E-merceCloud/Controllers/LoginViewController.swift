@@ -45,7 +45,10 @@ class ViewController: UIViewController {
             let resultJSON: JSON = JSON(result!)
             if !resultJSON["msg"].exists() {
                 //LoginSuccesss
-                self.emerceDAO.insertUser(email: params["email"]!, firstname: "test", lastname: "for now")
+                let fname = resultJSON["first_name"].rawString()
+                let lname = resultJSON["last_name"].rawString()
+                
+                self.emerceDAO.insertUser(email: params["email"]!, firstname: fname!, lastname: lname!)
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "homeSegue", sender: nil)
                 }
