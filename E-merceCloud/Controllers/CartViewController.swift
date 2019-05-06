@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class CartViewController: UIViewController {
 
+    @IBOutlet weak var checkOutBtn: UIButton!
     @IBOutlet weak var cartTable: UITableView!
     let apiInstance: apiServer = apiServer()
     let emerceDAO: EmerceDAO = EmerceDAO()
@@ -25,8 +26,17 @@ class CartViewController: UIViewController {
         }
         cartTable.delegate = self
         cartTable.dataSource = self
-        self.cartTable.rowHeight = 90
+        self.cartTable.rowHeight = 110
         self.title = "My Cart"
+    }
+    
+    func pulsate() {
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.5
+        pulse.fromValue = 0.95
+        pulse.toValue = 1
+        
+        checkOutBtn.layer.add(pulse, forKey: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,6 +46,12 @@ class CartViewController: UIViewController {
             getCart()
         }
         
+    }
+    @IBAction func checkOutAction(_ sender: UIButton) {
+        pulsate()
+        let alert = UIAlertController(title: "CheckOut Not Implemented", message: "Demo v1.0.0", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func getCart(){

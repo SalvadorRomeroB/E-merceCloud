@@ -34,8 +34,21 @@ class ProductDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet weak var addCartBtn: UIButton!
+    
+    
+    func pulsate() {
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.5
+        pulse.fromValue = 0.95
+        pulse.toValue = 1
+        
+        addCartBtn.layer.add(pulse, forKey: nil)
+    }
+    
     
     @IBAction func addToCartAction(_ sender: UIButton) {
+        pulsate()
         print("******** added to cart! ******")
         
         let userSignedIn: UserVO = self.emerceDAO.findLastUser()
