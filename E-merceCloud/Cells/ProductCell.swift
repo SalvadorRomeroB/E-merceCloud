@@ -18,7 +18,7 @@ class ProductCell: UITableViewCell {
     func setProduct(product: Product){
         getImage(link: product.image)
         productName.text = product.name
-        productPrice.text = String(product.price)
+        productPrice.text = "$" + String(product.price)
     }
     
     func getImage(link : String){

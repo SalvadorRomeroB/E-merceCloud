@@ -20,7 +20,7 @@ class ProductsViewController: UIViewController {
         getProducts()
         tableView.delegate = self
         tableView.dataSource = self
-        self.tableView.rowHeight = 90
+        self.tableView.rowHeight = 110
         self.title = "Products"
     }
     

@@ -26,7 +26,7 @@ class ProductDetailViewController: UIViewController {
         self.title = "Product Detail"
         if product.name != ""{
             nameLbl.text = product.name
-            productPrice.text = String(product.price)
+            productPrice.text = "$" + String(product.price)
             productDescription.text = product.description
             let url = URL(string: product.image)
             downloadImage(from: url!)
