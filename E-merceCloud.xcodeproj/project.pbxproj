@@ -18,6 +18,7 @@
 		9D446ED922722FA90068558A /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D446ED822722FA90068558A /* ProductsViewController.swift */; };
 		9D5B45642254744200D26FB9 /* apiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B45632254744200D26FB9 /* apiService.swift */; };
 		9D6765D9227F7EC600030689 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6765D8227F7EC600030689 /* HomeCell.swift */; };
+		9DFDBF572281F1E60099C8E0 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFDBF562281F1E60099C8E0 /* CompanyViewController.swift */; };
 		A75AD1542249648B00687850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD1532249648B00687850 /* AppDelegate.swift */; };
 		A75AD1562249648B00687850 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD1552249648B00687850 /* LoginViewController.swift */; };
 		A75AD1592249648B00687850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A75AD1572249648B00687850 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		9D446ED822722FA90068558A /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		9D5B45632254744200D26FB9 /* apiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiService.swift; sourceTree = "<group>"; };
 		9D6765D8227F7EC600030689 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		9DFDBF562281F1E60099C8E0 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		A75AD1502249648B00687850 /* E-merceCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-merceCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75AD1532249648B00687850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A75AD1552249648B00687850 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				A75AD1722249669900687850 /* MyOrdersViewController.swift */,
 				9D446ED822722FA90068558A /* ProductsViewController.swift */,
 				763F40C2227FC13E00755642 /* ProfileViewController.swift */,
+				9DFDBF562281F1E60099C8E0 /* CompanyViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				A75AD167224964B000687850 /* CreateAccountViewController.swift in Sources */,
 				763F40BF227F850200755642 /* ItemCart.swift in Sources */,
 				9D446ED522722DE60068558A /* ProductCell.swift in Sources */,
+				9DFDBF572281F1E60099C8E0 /* CompanyViewController.swift in Sources */,
 				A75AD1732249669900687850 /* MyOrdersViewController.swift in Sources */,
 				9D446ED922722FA90068558A /* ProductsViewController.swift in Sources */,
 				A75AD1562249648B00687850 /* LoginViewController.swift in Sources */,

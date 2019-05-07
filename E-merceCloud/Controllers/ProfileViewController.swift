@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var fnameLabel: UILabel!
     @IBOutlet weak var lnameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var contactCompanyBtn: UIButton!
     
     let emerceDAO: EmerceDAO = EmerceDAO()
     var user = UserVO()
@@ -35,11 +36,23 @@ class ProfileViewController: UIViewController {
         logOutBtn.layer.add(pulse, forKey: nil)
     }
     
+    func pulsateCompany() {
+        let pulse = CASpringAnimation(keyPath: "transform.scale")
+        pulse.duration = 0.5
+        pulse.fromValue = 0.95
+        pulse.toValue = 1
+        
+        contactCompanyBtn.layer.add(pulse, forKey: nil)
+    }
+    
     @IBAction func logOutAction(_ sender: UIButton) {
         pulsate()
         emerceDAO.deleteUser(email: user.email)
     }
     
+    @IBAction func contactCompanyAction(_ sender: UIButton) {
+        pulsateCompany()
+    }
     /*
     // MARK: - Navigation
 
