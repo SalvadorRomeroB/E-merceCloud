@@ -18,6 +18,7 @@ class CreateAccountViewController: UIViewController {
     }
     
     let apiInstance: apiServer = apiServer()
+    let emerceDAO: EmerceDAO = EmerceDAO()
     
     @IBOutlet weak var firstnameInput: UITextField!
     @IBOutlet weak var lastnameInput: UITextField!
@@ -43,6 +44,12 @@ class CreateAccountViewController: UIViewController {
                 let resultJSON: JSON = JSON(result!)
                 let alert = UIAlertController(title: "Account Created", message: resultJSON["user"].stringValue, preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default){(action) -> Void in
+                    
+                    let fname = params["first_name"]
+                    let lname = params["last_name"]
+                    
+                    self.emerceDAO.insertUser(email: params["email"]!, firstname: fname!, lastname: lname!)
+                    
                     self.performSegue(withIdentifier: "signUpHomeSegue", sender: nil)
                 })
                 self.present(alert, animated: true, completion: nil)
