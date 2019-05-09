@@ -36,4 +36,7 @@ class CompanyViewController: UIViewController {
             UIApplication.shared.openURL(number)
         }
     }
+    @IBAction func backAction(_ sender: UIBarButtonItem) {
+        
+    }
 }

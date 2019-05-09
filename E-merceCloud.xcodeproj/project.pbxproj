@@ -18,6 +18,8 @@
 		9D446ED922722FA90068558A /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D446ED822722FA90068558A /* ProductsViewController.swift */; };
 		9D5B45642254744200D26FB9 /* apiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B45632254744200D26FB9 /* apiService.swift */; };
 		9D6765D9227F7EC600030689 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6765D8227F7EC600030689 /* HomeCell.swift */; };
+		9D706E0B22847E350042E5DD /* SegueRightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D706E0A22847E350042E5DD /* SegueRightToLeft.swift */; };
+		9D706E0D22847F050042E5DD /* SegueLeftToRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D706E0C22847F050042E5DD /* SegueLeftToRight.swift */; };
 		9DFDBF572281F1E60099C8E0 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFDBF562281F1E60099C8E0 /* CompanyViewController.swift */; };
 		A75AD1542249648B00687850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD1532249648B00687850 /* AppDelegate.swift */; };
 		A75AD1562249648B00687850 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75AD1552249648B00687850 /* LoginViewController.swift */; };
@@ -46,6 +48,8 @@
 		9D446ED822722FA90068558A /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		9D5B45632254744200D26FB9 /* apiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apiService.swift; sourceTree = "<group>"; };
 		9D6765D8227F7EC600030689 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		9D706E0A22847E350042E5DD /* SegueRightToLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueRightToLeft.swift; sourceTree = "<group>"; };
+		9D706E0C22847F050042E5DD /* SegueLeftToRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueLeftToRight.swift; sourceTree = "<group>"; };
 		9DFDBF562281F1E60099C8E0 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		A75AD1502249648B00687850 /* E-merceCloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-merceCloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A75AD1532249648B00687850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9D706E0922847E190042E5DD /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				9D706E0A22847E350042E5DD /* SegueRightToLeft.swift */,
+				9D706E0C22847F050042E5DD /* SegueLeftToRight.swift */,
+			);
+			path = Segue;
+			sourceTree = "<group>";
+		};
 		A75AD1472249648B00687850 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +148,7 @@
 		A75AD1522249648B00687850 /* E-merceCloud */ = {
 			isa = PBXGroup;
 			children = (
+				9D706E0922847E190042E5DD /* Segue */,
 				9D446ED322722D9A0068558A /* Cells */,
 				9D5B4562225473DD00D26FB9 /* Models */,
 				A75AD1652249649400687850 /* Controllers */,
@@ -297,9 +311,11 @@
 				A75AD1732249669900687850 /* MyOrdersViewController.swift in Sources */,
 				9D446ED922722FA90068558A /* ProductsViewController.swift in Sources */,
 				A75AD1562249648B00687850 /* LoginViewController.swift in Sources */,
+				9D706E0D22847F050042E5DD /* SegueLeftToRight.swift in Sources */,
 				A75AD16B224964DE00687850 /* ProductDetailViewController.swift in Sources */,
 				9D446ED722722EB80068558A /* Product.swift in Sources */,
 				763F40C3227FC13E00755642 /* ProfileViewController.swift in Sources */,
+				9D706E0B22847E350042E5DD /* SegueRightToLeft.swift in Sources */,
 				A75AD1542249648B00687850 /* AppDelegate.swift in Sources */,
 				A75AD16F224964F800687850 /* BillingInfoViewController.swift in Sources */,
 				9D5B45642254744200D26FB9 /* apiService.swift in Sources */,
@@ -456,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6M5GULYXVZ;
 				INFOPLIST_FILE = "E-merceCloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -474,6 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6M5GULYXVZ;
 				INFOPLIST_FILE = "E-merceCloud/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

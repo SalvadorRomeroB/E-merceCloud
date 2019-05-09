@@ -9,11 +9,16 @@
 import UIKit
 import SwiftyJSON
 
-class CreateAccountViewController: UIViewController {
+class CreateAccountViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        firstnameInput.delegate = self
+        lastnameInput.delegate = self
+        emailInput.delegate = self
+        passwordInput.delegate = self
+        passwordConfirmInput.delegate = self
+        companyIdInput.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -29,6 +34,11 @@ class CreateAccountViewController: UIViewController {
     
     @IBAction func backToLogin(_ sender: UIButton) {
         performSegue(withIdentifier: "loginSegue", sender: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func signUpAction(_ sender: UIButton) {

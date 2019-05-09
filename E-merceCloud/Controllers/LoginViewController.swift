@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     let apiInstance: apiServer = apiServer()
     let emerceDAO: EmerceDAO = EmerceDAO()
 
@@ -23,6 +23,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         loginBtn.layer.cornerRadius = 10
         loginBtn.clipsToBounds = true
+        
+        userTxtField.delegate = self
+        passTxtField.delegate = self
     }
     
     @IBAction func createAccount(_ sender: UIButton) {
@@ -36,6 +39,11 @@ class ViewController: UIViewController {
         pulse.toValue = 1
         
         loginBtn.layer.add(pulse, forKey: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func loginAction(_ sender: UIButton) {
